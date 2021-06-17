@@ -1,19 +1,25 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import Dashboard from './src/screens/Dashboard';
+import api from './src/services/api';
 
 export default function App() {
+  const [theme, setTheme] = useState();
+  const [loading, setLoading] = useState(true);
+
+  async function getTheme() {
+    const { data } = await api.get('/theme');
+    setTheme(data);
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    getTheme();
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <ThemeProvider theme={theme}>
+      <Dashboard />
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
