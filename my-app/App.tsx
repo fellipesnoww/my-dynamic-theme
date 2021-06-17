@@ -30,7 +30,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <ThemeProvider theme={theme}>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Navigator screenOptions={{ headerShown: true }}>
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="TestScreen" component={TestScreen} />
         </Stack.Navigator>
