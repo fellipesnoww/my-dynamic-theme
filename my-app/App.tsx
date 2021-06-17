@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { ActivityIndicator } from 'react-native';
 import Dashboard from './src/screens/Dashboard';
 import api from './src/services/api';
 
@@ -14,8 +15,14 @@ export default function App() {
   }
 
   useEffect(() => {
-    getTheme();
+    setTimeout(() => {
+      getTheme();
+    }, 9000);
   }, []);
+
+  if (loading) {
+    return <ActivityIndicator color="red" />;
+  }
 
   return (
     <ThemeProvider theme={theme}>
