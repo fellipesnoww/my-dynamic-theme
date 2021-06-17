@@ -23,13 +23,13 @@
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
-     "import/extensions": [
+    "import/extensions": [
       "error",
       "ignorePackages",
       {
         "ts": "never"
       }
-    ]
+    ],
   },
   "settings": {
     "import/resolver": {
