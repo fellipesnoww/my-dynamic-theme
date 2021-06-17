@@ -4,7 +4,7 @@ import { themeRoutes } from "./theme.routes";
 
 const router = Router();
 
-router.use("/categories", themeRoutes);
+router.use("/theme", themeRoutes);
 
 
 export { router };
