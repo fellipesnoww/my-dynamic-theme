@@ -70,3 +70,9 @@ Com a aplicação e servidor rodando, utilize o [Postman](https://www.postman.co
   "secondary": "orange"
 }
 ```
+
+# Exemplo em execução
+
+
+https://user-images.githubusercontent.com/48105194/122448497-314d2b00-cf7b-11eb-8878-78439f4b3e2a.mp4
+
